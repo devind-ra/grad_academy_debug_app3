@@ -19,14 +19,14 @@
           <%= form.password_field :password, class: "form-control border-danger input-size", required: true %>
           <%= form.label :password_confirmation, class: "form-label mt-3" %>
           <%= form.password_field :password_confirmation, class: "form-control border-danger input-size", required: true %>
-          <div class="text-center text-light">
-            <%= form.submit t('forms.sign_up'), class: "mt-5 w-75" %>
+          <div class="text-center">
+            <%= form.submit t('forms.sign_up'), class: "btn btn-danger mt-5 w-75" %>
           </div>
         <% end %>
         <div class="d-flex align-items-center justify-content-center mt-3">
-          <h5 class="text-center text-light fw-normal pe-1"><%= t('users.login_prompt') %></h5>
+          <h5 class="text-center fw-normal pe-1"><%= t('users.login_prompt') %></h5>
           <%= link_to login_path do %>
-            <h5 class="text-center text-light fw-semibold text-danger"><%= t('forms.sign_in') %></h5>
+            <h5 class="text-center fw-semibold text-danger"><%= t('forms.sign_in') %></h5>
           <% end %>
         </div>
       </div>
