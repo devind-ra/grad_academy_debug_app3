@@ -76,8 +76,8 @@ class QuizForm
   end
 
   # Returns the range of current quiz pages.
-  def current_page_range
-    I18n.t('quiz_form.current_page_range', start_page: -1)
+  def current_page_range(current_page)
+    I18n.t('quiz_form.current_page_range', start_page: current_page)
   end
 
   # Returns a hash of questions for the current quiz page.
