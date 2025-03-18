@@ -42,6 +42,9 @@ module StepsHelper
     ((current_step.to_i - 1) * QUESTIONS_PER_PAGE) + question_index.to_i
   end
 
+  def answer_output(answer, question_index)
+    answer[question_index]
+  end
   # Generates validation error text for a specific question based on its index.
   #
   # Parameters:

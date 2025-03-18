@@ -137,19 +137,19 @@ en:
       submit: "Next"
       question_1:
         question: "What is the tallest mammal on Earth?"
-        correct_answer: "giraffe"
+        correct_answer: "Giraffe"
       question_2:
         question: "What is the world’s largest ocean?"
-        correct_answer: "pacific"
+        correct_answer: "Pacific"
       question_3:
         question: "What is the capital city of Peru?"
-        correct_answer: "lima"
+        correct_answer: "Lima"
       question_4:
         question: "What is the chemical symbol for gold?"
-        correct_answer: "au"
+        correct_answer: "Au"
       question_5:
         question: "What is your favourite programming language?"
-        correct_answer: "ruby"
+        correct_answer: "Ruby"
   check_answers:
     title: "Check Answers"
     heading: "CHECK YOUR ANSWERS"
