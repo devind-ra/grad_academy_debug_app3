@@ -111,4 +111,8 @@ module ScoreboardHelper
       return '&#128169'
     end
   end
+
+  def sort_arrow(column, sort)
+    return column == sort ? " &darr;" : ""
+  end
 end

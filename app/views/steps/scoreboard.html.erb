@@ -1,15 +1,15 @@
 <% provide(:title, t('scoreboard.title')) %>
+
 <div id="check-answers" class="container d-flex flex-column align-items-center mt-4 mb-4 pt-5">
   <h1 class="text-danger text-center"><%= t('scoreboard.heading') %></h1>
   <hr class="border border-danger w-100 border-2 my-2">
-
   <table class="table mt-4">
     <thead>
       <tr>
-        <th>Quiz</th>
-        <th>User</th>
-        <th>Date</th>
-        <th>Score</th>
+        <th><%= link_to t('Quiz ' +  sanitize(sort_arrow("id", params[:sort]))), scoreboard_steps_path(sort: "id"), class: "text-danger" %> </th>
+        <th><%= link_to t('User ' +  sanitize(sort_arrow("User", params[:sort]))), scoreboard_steps_path(sort: "User"), class: "text-danger" %> </th>
+        <th><%= link_to t('Date'  +  sanitize(sort_arrow("date_attempted", params[:sort]))), scoreboard_steps_path(sort: "date_attempted"), class: "text-danger" %> </th>
+        <th><%= link_to t('Score' +  +  sanitize(sort_arrow("score", params[:sort]))), scoreboard_steps_path(sort: "score"), class: "text-danger" %> </th>
         <th>Download Results</th>
       </tr>
     </thead>
@@ -17,6 +17,8 @@
       <% @top_scores.each_with_index do |answer, _index| %>
         <tr>
           <td>
+          <%= @req %>
+
             <%= t('scoreboard.table.quiz_number', id: answer.id) %>
           </td>
           <td>
@@ -26,7 +28,7 @@
             <%= answer.date_attempted.strftime('%B %d, %Y') %>
           </td>
           <td>
-            <%= answer.score %>
+            <%= answer.score %>%
             <%= sanitize emoji_check(answer.score) %>
           </td>
           <td>
