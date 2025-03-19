@@ -1,8 +1,6 @@
 # StepsController manages the flow of steps in a quiz application,
 # including viewing, editing, updating, and finalizing quiz forms.
 class StepsController < ApplicationController
-  require 'uri'
-
   include Authentication
   include QuizConstantsHelper
   include QuizResultsHelper
