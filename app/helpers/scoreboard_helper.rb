@@ -97,4 +97,18 @@ module ScoreboardHelper
       question_data[:correct_answer]
     ]
   end
+
+  def emoji_check(score)
+    if score == 100
+      return '&#129351'
+    elsif score < 100 && score >= 75
+      return '&#129352'
+    elsif score < 75 && score >= 50
+      return '&#129353'
+    elsif score < 50 and score > 0
+      return '&#129394'
+    else
+      return '&#128169'
+    end
+  end
 end

@@ -26,7 +26,8 @@
             <%= answer.date_attempted.strftime('%B %d, %Y') %>
           </td>
           <td>
-            <%= answer.score %>%
+            <%= answer.score %>
+            <%= sanitize emoji_check(answer.score) %>
           </td>
           <td>
             <%= link_to download_steps_path(format: :csv, id: answer.id), class: 'link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-25-hover d-flex align-items-center' do %>
