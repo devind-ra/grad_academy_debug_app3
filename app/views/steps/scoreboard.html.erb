@@ -6,10 +6,10 @@
   <table class="table mt-4">
     <thead>
       <tr>
-        <th>Quiz</th>
-        <th>User</th>
-        <th>Date</th>
-        <th>Score</th>
+        <th><%= link_to t('Quiz'), scoreboard_steps_path(id: "id"), class: "text-danger" %> </th>
+        <th><%= link_to t('User'), scoreboard_steps_path(id: "User"), class: "text-danger" %> </th>
+        <th><%= link_to t('Date'), scoreboard_steps_path(id: "date_attempted"), class: "text-danger" %> </th>
+        <th><%= link_to t('Score'), scoreboard_steps_path(id: "score"), class: "text-danger" %> </th>
         <th>Download Results</th>
       </tr>
     </thead>
@@ -26,7 +26,7 @@
             <%= answer.date_attempted.strftime('%B %d, %Y') %>
           </td>
           <td>
-            <%= answer.score %>
+            <%= answer.score %>%
             <%= sanitize emoji_check(answer.score) %>
           </td>
           <td>
