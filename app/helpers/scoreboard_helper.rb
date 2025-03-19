@@ -112,7 +112,7 @@ module ScoreboardHelper
     end
   end
 
-  def sort_emoji(column, sort)
-    return column == sort ? " &#10024" : ""
+  def sort_arrow(column, sort)
+    return column == sort ? " &darr;" : ""
   end
 end
