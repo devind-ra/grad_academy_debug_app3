@@ -1,6 +1,8 @@
 # StepsController manages the flow of steps in a quiz application,
 # including viewing, editing, updating, and finalizing quiz forms.
 class StepsController < ApplicationController
+  require 'uri'
+
   include Authentication
   include QuizConstantsHelper
   include QuizResultsHelper
@@ -77,8 +79,9 @@ class StepsController < ApplicationController
   # Allows download of scoreboard as CSV.
   def scoreboard
     order_on = "score"
-    if params.has_key?(:id)
-      order_on = params[:id]
+
+    if params.has_key?(:sort)
+      order_on = params[:sort]
     end
     @top_scores = Answer.where(completed: true).where.not(score: nil).includes(:user).order("#{order_on} DESC").limit(10)
     respond_to do |format|

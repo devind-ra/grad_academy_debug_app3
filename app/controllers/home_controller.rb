@@ -1,6 +1,7 @@
 # HomeController handles requests related to the home page of the application.
 class HomeController < ApplicationController
   before_action :redirect_if_not_logged_in
+  before_action :track_previous_id
 
   # GET /home/index --> actually redirects to /welcome
   # Displays the home page.
