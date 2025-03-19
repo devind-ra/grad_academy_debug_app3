@@ -6,10 +6,10 @@
   <table class="table mt-4">
     <thead>
       <tr>
-        <th><%= link_to t('Quiz'), scoreboard_steps_path(id: "id"), class: "text-danger" %> </th>
-        <th><%= link_to t('User'), scoreboard_steps_path(id: "User"), class: "text-danger" %> </th>
-        <th><%= link_to t('Date'), scoreboard_steps_path(id: "date_attempted"), class: "text-danger" %> </th>
-        <th><%= link_to t('Score'), scoreboard_steps_path(id: "score"), class: "text-danger" %> </th>
+        <th><%= link_to t('Quiz ' +  sanitize(sort_emoji("id", params[:id]))), scoreboard_steps_path(id: "id"), class: "text-danger" %> </th>
+        <th><%= link_to t('User ' +  sanitize(sort_emoji("User", params[:id]))), scoreboard_steps_path(id: "User"), class: "text-danger" %> </th>
+        <th><%= link_to t('Date')  +  sanitize(sort_emoji("date_attempted", params[:id])), scoreboard_steps_path(id: "date_attempted"), class: "text-danger" %> </th>
+        <th><%= link_to t('Score') +  +  sanitize(sort_emoji("score", params[:id])), scoreboard_steps_path(id: "score"), class: "text-danger" %> </th>
         <th>Download Results</th>
       </tr>
     </thead>

@@ -111,4 +111,8 @@ module ScoreboardHelper
       return '&#128169'
     end
   end
+
+  def sort_emoji(column, sort)
+    return column == sort ? " &#10024" : ""
+  end
 end
